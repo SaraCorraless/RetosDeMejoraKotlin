@@ -20,7 +20,29 @@
 class Reto1(){
 
     fun prueba(): Unit {
-        println("Hello World!")
+        val rep = 100
+        var result = ""
+        for (i in 1..rep){
+            if (i % 3 == 0){
+                result = "El número $i es múltiplo de 3: fizz"
+            }
+
+            if (i % 5 == 0){
+                result = "El número $i es múltiplo de 5: buzz"
+            }
+
+            if (i % 5 == 0 && i % 3 == 0){
+                result = "El número $i es múltiplo de 5 y de 3: fizzbuzz"
+            }
+
+            if (result.isNotEmpty()){
+                println(result)
+                result = ""
+            }
+
+        }
+
+
     }
 
 }
