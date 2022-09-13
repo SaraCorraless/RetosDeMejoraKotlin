@@ -18,5 +18,31 @@
  *
  */
 
-class Reto2 {
+class Reto2() {
+    fun anagrama(palabra1:String, palabra2: String): Unit{
+
+        if(palabra1.length == palabra2.length){
+            val rep = palabra1.length-1
+            var flag: Boolean
+            var count: Int = 0
+            for (i in 0..rep){
+                flag = false
+                for (j in rep downTo 0){
+                    if(palabra1[i].toChar() == palabra2[j].toChar() && !flag){
+                        flag = true
+                        count++
+                        println("Letras iguales: $count")
+                    }
+                }
+            }
+            if (palabra1.length == count){
+                println("Las palabras $palabra1 y $palabra2 son anagramas")
+            } else {
+                println("Las palabras $palabra1 y $palabra2 no son anagramas")
+            }
+
+        }
+
+    }
 }
+

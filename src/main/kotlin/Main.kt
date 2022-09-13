@@ -1,4 +1,4 @@
 fun main(args: Array<String>) {
-    Reto1().prueba()
-
+    //Reto1().prueba()
+    Reto2().anagrama("is","si")
 }
