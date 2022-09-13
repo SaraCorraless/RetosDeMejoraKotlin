@@ -1,13 +1,13 @@
+
 /*
- * Reto #2
- * LA SUCESIÓN DE FIBONACCI
- * Fecha publicación enunciado: 10/01/22
- * Fecha publicación resolución: 17/01/22
- * Dificultad: DIFÍCIL
+ * Reto #3
+ * ¿ES UN NÚMERO PRIMO?
+ * Fecha publicación enunciado: 17/01/22
+ * Fecha publicación resolución: 24/01/22
+ * Dificultad: MEDIA
  *
- * Enunciado: Escribe un programa que imprima los 50 primeros números de la sucesión de Fibonacci empezando en 0.
- * La serie Fibonacci se compone por una sucesión de números en la que el siguiente siempre es la suma de los dos anteriores.
- * 0, 1, 1, 2, 3, 5, 8, 13...
+ * Enunciado: Escribe un programa que se encargue de comprobar si un número es o no primo.
+ * Hecho esto, imprime los números primos entre 1 y 100.
  *
  * Información adicional:
  * - Usa el canal de nuestro discord (https://mouredev.com/discord) "🔁reto-semanal" para preguntas, dudas o prestar ayuda a la acomunidad.
@@ -17,5 +17,5 @@
  *
  */
 
-class Reto3() {
+class Reto4() {
 }
