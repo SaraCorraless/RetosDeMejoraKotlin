@@ -18,4 +18,23 @@
  */
 
 class Reto3() {
+
+    fun fibonacci(): Unit {
+        val fibo:ArrayList<Int> = ArrayList()
+        var num = 0
+
+        //Otra forma de for: (1..50).forEach { _ ->
+        for (i in 0..50){
+            if (i == 0 || i == 1){
+                fibo.add(i)
+            } else{
+                num = fibo.get(i-1) + fibo.get(i-2)
+                fibo.add(num)
+            }
+        }
+
+        println(fibo.toString())
+
+    }
+
 }
