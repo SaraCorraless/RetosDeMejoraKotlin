@@ -18,4 +18,16 @@
  */
 
 class Reto4() {
+
+    fun primos(number:Int): Boolean {
+        if (number < 2 || number == 4){
+            return false
+        }
+            for (it in 2 until number){
+                if (number % it == 0) {
+                    return false
+                }
+            }
+        return true
+    }
 }
