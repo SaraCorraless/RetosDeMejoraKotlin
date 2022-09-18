@@ -19,4 +19,24 @@
  */
 
 class Reto5() {
+
+    fun calculoPoliginos(poligono:String, base:Double?, altura:Double?, lado:Double?): String {
+        var respuesta: String = ""
+        when(poligono){
+            "Triángulo" -> {
+                respuesta = "Área del Triángulo : (Base * Altura) / 2 = "+ (base!! * altura!!) /2
+            }
+            "Cuadrado" -> {
+                respuesta = "Área del Cuadrado : Lado * Lado = " + (lado!! * lado)
+            }
+            "Rectángulo" -> respuesta = "Área del Rectángulo : Base * Altura = "+ (base!! * altura!!)
+            else ->{
+                respuesta = "Polígono incorrecto"
+            }
+
+
+        }
+        return respuesta
+    }
+
 }

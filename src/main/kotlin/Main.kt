@@ -3,10 +3,14 @@ fun main(args: Array<String>) {
     //Reto2().anagrama("is","si")
     //Reto3().fibonacci()
 
-    for (num in 1 .. 100){
+    /*for (num in 1 .. 100){
         if(Reto4().primos(num)){
             println("$num es un número primo")
         }
-    }
+    }*/
+
+    println(Reto5().calculoPoliginos("Triángulo", 10.0, 9.0, 0.0))
+
+
 
 }
