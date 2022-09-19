@@ -17,4 +17,17 @@
  */
 
 class Reto7() {
+
+    fun inversa(): Unit {
+        var mensaje: String = "Hola mundo"
+        var mensajeInverso: String = ""
+
+        for (i in mensaje.length-1 downTo  0){
+            mensajeInverso = mensajeInverso + mensaje.get(i)
+
+        }
+
+        println(mensajeInverso)
+
+    }
 }
