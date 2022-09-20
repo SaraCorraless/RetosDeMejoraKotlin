@@ -1,3 +1,5 @@
+import java.util.*
+
 /*
  * Reto #7
  * CONTANDO PALABRAS
@@ -20,4 +22,31 @@
  */
 
 class Reto8() {
+    fun recuento() : Unit{
+        var frase: List<String> = "Es por una prueba de una de Reto prueba De".lowercase(Locale.getDefault()).split(" ")
+        var repeticiones : Int = 0
+        var respuesta:String = ""
+        var it:Int = 0
+        println(frase)
+        for (i in 0 .. frase.size-1){
+            while (frase.contains(frase.get(i)) && it < frase.size ){
+                if (frase.get(i) == frase.get(it)){
+                    repeticiones++
+                }
+                it++
+            }
+            if (!respuesta.contains(frase.get(i))){
+                respuesta += "\n ${frase.get(i)} : $repeticiones"
+            }
+
+            it = 0
+            repeticiones = 0
+        }
+
+        println(respuesta)
+
+
+
+    }
+
 }

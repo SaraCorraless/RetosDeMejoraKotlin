@@ -11,8 +11,9 @@ fun main(args: Array<String>) {
 
     //println(Reto5().calculoPoliginos("Triángulo", 10.0, 9.0, 0.0))
 
+    //Reto7().inversa()
 
+    Reto8().recuento()
 
-    Reto7().inversa()
 
 }
