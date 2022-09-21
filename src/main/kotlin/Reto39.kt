@@ -14,6 +14,7 @@
  * - Tienes toda la información sobre los retos semanales en
  *   https://retosdeprogramacion.com/semanales2022.
  *
+ *
  */
 
 class Reto39() {
