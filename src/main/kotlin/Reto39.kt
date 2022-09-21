@@ -1,3 +1,5 @@
+import kotlin.math.*
+
 /*
  * Reto #38
  * BINARIO A DECIMAL
@@ -18,4 +20,21 @@
  */
 
 class Reto39() {
+
+    fun binarioAdecimal(){
+        var binario = 1110111
+        var num: Int = 0
+        var posicion:Int = 0
+        var resultado:Int = 0
+
+        for (i in 0 .. binario.toString().length -1){
+            num = binario.toString().get(i).digitToInt()
+            posicion = (binario.toString().length -1)-i
+            resultado += num * (Math.pow(2.0, posicion.toDouble())).roundToInt()
+        }
+
+        println("Binario: $binario\nDecimal: $resultado")
+
+    }
+
 }

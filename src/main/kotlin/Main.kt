@@ -14,6 +14,10 @@ fun main(args: Array<String>) {
     //Reto7().inversa()
 
     //Reto8().recuento()
-    Reto9().decimalAbinario()
+    //Reto9().decimalAbinario()
+
+    Reto39().binarioAdecimal()
+
+
 
 }
