@@ -17,6 +17,23 @@
  */
 
 class Reto9(){
+    fun decimalAbinario(){
+        var dividendo: Int = 23
+        var resto:Int = 0
+        var resultado:String = ""
 
+        while (dividendo >0){
+            resto = dividendo%2
+            dividendo /= 2
+
+            resultado += resto.toString()
+        }
+
+
+        for (i in resultado.length-1  downTo 0){
+            print(resultado.get(i))
+        }
+
+    }
 
 }
