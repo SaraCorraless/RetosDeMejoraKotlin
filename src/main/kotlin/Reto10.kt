@@ -1,3 +1,5 @@
+import java.util.*
+
 /*
  * Reto #9
  * CÓDIGO MORSE
@@ -19,18 +21,48 @@
  */
 
 class Reto10() {
-    fun conversion(){
+    private val alfabetoMorse =
+        mapOf("A" to ".-", "B" to "-...", "C" to "-.-.",
+            "D" to "-..", "E" to ".", "F" to "..-.",
+            "G" to "--.", "H" to "....", "I" to "..",
+            "J" to ".---", "K" to "-.-", "L" to ".-..",
+            "M" to "--", "N" to "-.", "O" to "---",
+            "P" to ".--.", "Q" to "--.-", "R" to ".-.",
+            "S" to "...", "T" to "-", "U" to "..-",
+            "V" to "...-", "W" to ".--", "X" to "-..-",
+            "Y" to "-.--", "Z" to "--..", "1" to ".----",
+            "2" to "..---", "3" to "...--", "4" to "....-",
+            "5" to ".....", "6" to "-....", "7" to "--...",
+            "8" to "---..", "9" to "----.", "0" to "-----")
 
+
+
+    fun conversion(palabra:String){
+        when{
+            Regex("[0-9]|[A-z]").containsMatchIn(palabra) -> alfabetoMorse(palabra)
+            Regex("[.]|[-]|[ ]|[  ]").containsMatchIn(palabra) -> morseAlfabeto(palabra)
+        }
 
     }
 
-    fun morseAlfabeto(){
+    fun morseAlfabeto(palabra:String){
         println("convertir a alfabeto")
+
     }
 
-    fun alfabetoMorse(){
+    fun alfabetoMorse(palabra:String){
         println("Convertir a morse")
 
+        var uperPalabra =  palabra.uppercase(Locale.getDefault())
+
+        for (i in 0..uperPalabra.length-1){
+            if (uperPalabra.get(i).toString() == " "){
+                print("  ")
+            }else {
+                print(" "+alfabetoMorse[uperPalabra.get(i).toString()])
+            }
+
+        }
     }
 
 

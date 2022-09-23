@@ -16,7 +16,15 @@ fun main(args: Array<String>) {
     //Reto8().recuento()
     //Reto9().decimalAbinario()
 
-    Reto39().binarioAdecimal()
+    Reto10().conversion("... ..  ")
+
+
+
+
+
+
+
+    //Reto39().binarioAdecimal()
 
 
 
