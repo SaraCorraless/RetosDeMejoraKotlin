@@ -1,4 +1,6 @@
+
 import java.util.*
+import kotlin.collections.HashMap
 
 /*
  * Reto #9
@@ -21,8 +23,8 @@ import java.util.*
  */
 
 class Reto10() {
-    private val alfabetoMorse =
-        mapOf("A" to ".-", "B" to "-...", "C" to "-.-.",
+    private val alfabetoMorse: HashMap<String, String> =
+        hashMapOf("A" to ".-", "B" to "-...", "C" to "-.-.",
             "D" to "-..", "E" to ".", "F" to "..-.",
             "G" to "--.", "H" to "....", "I" to "..",
             "J" to ".---", "K" to "-.-", "L" to ".-..",
@@ -35,21 +37,31 @@ class Reto10() {
             "5" to ".....", "6" to "-....", "7" to "--...",
             "8" to "---..", "9" to "----.", "0" to "-----")
 
-
-
     fun conversion(palabra:String){
         when{
             Regex("[0-9]|[A-z]").containsMatchIn(palabra) -> alfabetoMorse(palabra)
             Regex("[.]|[-]|[ ]|[  ]").containsMatchIn(palabra) -> morseAlfabeto(palabra)
         }
-
     }
 
+
+
+    //Pase de código morse a alfabeto
     fun morseAlfabeto(palabra:String){
         println("convertir a alfabeto")
 
+        val splitPalabra = palabra.split(Regex("[ ]|[  ]"))
+        for (i in 0 .. splitPalabra.size-1){
+            if (getKey(splitPalabra.get(i)) == ""){
+                print(" ")
+            }else{
+                print(getKey(splitPalabra.get(i)))
+            }
+        }
     }
 
+
+    //Pasa de alfabeto a código morse
     fun alfabetoMorse(palabra:String){
         println("Convertir a morse")
 
@@ -61,9 +73,19 @@ class Reto10() {
             }else {
                 print(" "+alfabetoMorse[uperPalabra.get(i).toString()])
             }
-
         }
     }
 
+    //devuelve el valor del key de una hashMap
+    fun getKey(letra: String): String{
+        var letraAlfa = ""
+        for ((key, value) in alfabetoMorse.entries){
+            if (value == letra){
+                letraAlfa =  key
+            }
+        }
+
+        return letraAlfa
+    }
 
 }
