@@ -16,8 +16,8 @@ fun main(args: Array<String>) {
     //Reto8().recuento()
     //Reto9().decimalAbinario()
 
-    Reto10().conversion(".... --- .-.. .-   -- ..- -. -.. ---")
-
+    //Reto10().conversion(".... --- .-.. .-   -- ..- -. -.. ---")
+    Reto11().equilibrado("(c+d)")
 
 
 

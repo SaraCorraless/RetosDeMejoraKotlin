@@ -20,4 +20,23 @@
 */
 
 class Reto11() {
+    private val simbolos = mapOf(
+        "(" to ")", "[" to  "]", "{" to "}"
+    )
+    fun equilibrado(expresion:String){
+
+
+
+        for (i in 0 .. expresion.length-1){
+
+            var contineneSimb = expresion.contains(i.toString())
+            if (contineneSimb){
+                println(i.toString())
+            }
+        }
+
+
+    }
+
+
 }
