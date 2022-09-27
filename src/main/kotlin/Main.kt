@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
 
 
 
-    Reto39().binarioAdecimal(null)
+    Reto39().binarioAdecimal(110)
 
 
 
