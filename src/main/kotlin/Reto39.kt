@@ -26,7 +26,7 @@ class Reto39() {
         var num: Int = 0
         var posicion:Int = 0
         var resultado:Int = 0
-        if (!binario.toString().contains("1")  || !binario.toString().contains("0")) {
+        //if (!binario.toString().toCharArray().contains('1')  || !binario.toString().toCharArray().contains('0')) {
             for (i in 0 .. binario.toString().length -1){
 
                     num = binario.toString().get(i).digitToInt()
@@ -34,9 +34,9 @@ class Reto39() {
                     resultado += num * (Math.pow(2.0, posicion.toDouble())).roundToInt()
             }
             println("Binario: $binario\nDecimal: $resultado")
-        }else{
+        /*}else{
             println("Valor no binario")
-        }
+        }*/
 
 
     }
