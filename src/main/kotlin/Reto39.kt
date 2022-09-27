@@ -21,19 +21,23 @@ import kotlin.math.*
 
 class Reto39() {
 
-    fun binarioAdecimal(){
-        var binario = 1110111
+    fun binarioAdecimal(binario: Int){
+        //var binario = 1110111
         var num: Int = 0
         var posicion:Int = 0
         var resultado:Int = 0
+        if (!binario.toString().contains("1")  || !binario.toString().contains("0")) {
+            for (i in 0 .. binario.toString().length -1){
 
-        for (i in 0 .. binario.toString().length -1){
-            num = binario.toString().get(i).digitToInt()
-            posicion = (binario.toString().length -1)-i
-            resultado += num * (Math.pow(2.0, posicion.toDouble())).roundToInt()
+                    num = binario.toString().get(i).digitToInt()
+                    posicion = (binario.toString().length - 1) - i
+                    resultado += num * (Math.pow(2.0, posicion.toDouble())).roundToInt()
+            }
+            println("Binario: $binario\nDecimal: $resultado")
+        }else{
+            println("Valor no binario")
         }
 
-        println("Binario: $binario\nDecimal: $resultado")
 
     }
 
