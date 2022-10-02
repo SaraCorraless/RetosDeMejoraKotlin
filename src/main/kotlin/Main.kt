@@ -17,15 +17,15 @@ fun main(args: Array<String>) {
     //Reto9().decimalAbinario()
 
     //Reto10().conversion(".... --- .-.. .-   -- ..- -. -.. ---")
-    //Reto11().equilibrado("(c+d)")
+    //Reto11().equilibrado("(c+d)")/*TODO: no resuelto*/
 
 
 
 
 
 
-    Reto39().binarioAdecimal(110)
-
+    //Reto39().binarioAdecimal(110)
+    Reto40().quickSoft()
 
 
 }
