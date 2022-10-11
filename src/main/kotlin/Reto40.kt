@@ -23,16 +23,37 @@
 
 class Reto40() {
     var arrayNum = arrayOf(8, 3, 6, 4, 2, 5, 7, 1)
-
+    //var arrayNum = arrayOf(-2, 3, 1, 4, 2, 6, 7, 9)
     fun quickSoft(){
-        var newArray = fase1(arrayNum)
+        var newArray = quicksort(arrayNum)
+        println(newArray.contentToString())
         /*despues de ordenar los mayores y los menores se divide
         la lista en dos y se repite el proceso con cada parte
         */
-        var parte1A = newArray.copyOfRange(0, (newArray.size)/2)
-        var parte2A = newArray.copyOfRange((newArray.size)/2, newArray.size)
-        var part1 = fase1(parte1A)
+        //var parte1A = newArray.copyOfRange(0, (newArray.size)/2)
+        //var parte2A = newArray.copyOfRange((newArray.size)/2, newArray.size)
+        //parte1A = fase1(parte1A)
+        //println(parte1A.contentToString())
+        //parte2A = fase1(parte2A)
+        //println(parte2A.contentToString())
+    }
 
+    fun quicksort(items:Array<Int>):Array<Int>{
+        if (items.count() < 2){
+            return items
+        }
+        val pivot = items[items.count()/2]
+
+        val equal = items.filter { it == pivot }
+        println("pivot value is : "+equal)
+
+        val less = items.filter { it < pivot }
+        println("Lesser values than pivot : "+less)
+
+        val greater = items.filter { it > pivot }
+        println("Greater values than pivot : "+greater)
+
+        return quicksort(less.toTypedArray()) + equal + quicksort(greater.toTypedArray())
     }
 
 
@@ -43,9 +64,9 @@ class Reto40() {
         var pivot = listaNum[(listaNum.size / 2)-1]
         var punte1 = 0
         var punte2 = listaNum.size-1
-        for (it in 0 .. listaNum.size-1){
+        for (it in 0 .. (listaNum.size-1)/2){
 
-            if (listaNum.get(punte1) > pivot && listaNum.get(punte2) < pivot){
+            if (listaNum.get(punte1) >= pivot && listaNum.get(punte2) < pivot){
 
                 cambio = listaNum[punte1]
                 listaNum.set(punte1, (listaNum.get(punte2)))
