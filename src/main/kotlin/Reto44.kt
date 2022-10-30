@@ -36,8 +36,8 @@
 
 class Reto44() {
 
-    fun trucoTrato(){
+    /*fun trucoTrato(PersonaTrucoTrato[]){
 
-    }
+    }*/
 
 }

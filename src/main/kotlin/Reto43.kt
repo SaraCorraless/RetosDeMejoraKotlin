@@ -12,7 +12,13 @@
 
 class Reto43() {
 
-    fun gradosFahrenheit(){
+    fun gradosFahrenheit(temperatura:String){
+        if (temperatura.contains("º")){
 
+            val temp = temperatura.replace("º", "")
+            println((temp.toDouble() * 9 / 5) + 32+"º")
+        }else{
+            println("Introduce un valor en grados")
+        }
     }
 }
