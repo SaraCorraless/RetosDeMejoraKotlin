@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
     //Reto39().binarioAdecimal(110)
     //Reto40().quickSoft()
 
-    Reto43().gradosFahrenheit("20º")
+    Reto43().gradosFahrenheit("20ºF")
 
     //val arrayPersonas = arrayOf(PersonasTrucoTrato(21, "Sara", 123), PersonasTrucoTrato(7, "Betty", 203))
     //Reto44().trucoTrato(arrayPersonas, "TRUCO")

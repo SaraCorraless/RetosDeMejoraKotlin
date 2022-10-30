@@ -14,9 +14,14 @@ class Reto43() {
 
     fun gradosFahrenheit(temperatura:String){
         if (temperatura.contains("º")){
+            if (temperatura.contains("C")){
+                val temp = (temperatura.replace("ºC", "").toDouble()  * 9 / 5) + 32
+                println(temp.toString()+"ºF")
+            }else if (temperatura.contains("F")){
+                val temp = (temperatura.replace("ºF", "").toDouble() - 32) * 5 / 9
+                println(temp.toString() + "ºC")
+            }
 
-            val temp = temperatura.replace("º", "")
-            println((temp.toDouble() * 9 / 5) + 32+"º")
         }else{
             println("Introduce un valor en grados")
         }
